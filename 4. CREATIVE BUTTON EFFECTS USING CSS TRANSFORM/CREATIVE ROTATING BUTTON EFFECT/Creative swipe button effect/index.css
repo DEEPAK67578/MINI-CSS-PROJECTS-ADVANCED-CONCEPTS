@@ -1,0 +1,40 @@
+body {
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 40px;
+    font-family: sans-serif;
+    color: black;
+    font-weight: 400;
+    border: 2px solid black;
+    padding: 20px 30px;
+    position: relative;
+    transition: color 1s;
+    overflow: hidden;
+}
+
+a:before {
+    content: '';
+    background-color: rgb(107, 0, 98);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translate(-240px);
+    transition: transform 1s;
+}
+
+a:hover:before {
+    transform: translate(0);
+}
+
+a:hover {
+    color: white;
+}
