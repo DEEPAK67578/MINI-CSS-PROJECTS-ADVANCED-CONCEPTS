@@ -13,7 +13,7 @@ a {
     border: 5px solid black;
     padding: 20px 30px;
     position: relative;
-    transition: 1s;
+    transition:color 1s;
 }
 
 a:before {

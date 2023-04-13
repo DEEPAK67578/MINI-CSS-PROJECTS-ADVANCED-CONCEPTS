@@ -1,0 +1,40 @@
+body {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(66, 66, 66);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-family: sans-serif;
+    font-size: 30px;
+    border: 3px solid white;
+    padding: 20px 40px;
+    position: relative;
+    transition: transform 1s;
+    overflow: hidden;
+}
+
+a:before {
+    content: 'Yeah!';
+    font-family: sans-serif;
+    font-size: 30px;
+    text-align: center;
+    line-height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(250, 0, 0);
+    transform: translateY(-80px);
+
+    transition: transform 1s;
+}
+
+a:hover:before {
+    transform: translateY(0);
+}
