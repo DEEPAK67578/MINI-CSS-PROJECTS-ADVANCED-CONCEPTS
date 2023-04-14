@@ -1,0 +1,41 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: sans-serif;
+    color: black;
+    border: 2px solid black;
+    padding: 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+a:before {
+    background-color: rgba(0, 0, 0, 0.5);
+    content: 'Hover me';
+    color: white;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(600%);
+    opacity: 0;
+    transition: all 0.5s;
+    
+}
+
+a:hover:before { 
+    transform: scale(100%);
+    background-color: black;
+    opacity: 1;
+}
