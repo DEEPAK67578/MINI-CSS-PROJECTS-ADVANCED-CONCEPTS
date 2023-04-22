@@ -1,0 +1,84 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: verdana;
+    background-color: rgb(32, 32, 32);
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-align: center;
+    /* background-color: red; */
+    color: white;
+    padding: 20px 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99%;
+    border-right: 1px solid white;
+    transition: all 1s;
+    transform: translateY(-100%);
+    /* opacity: 0; */
+}
+
+ a::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99%;
+    border-left: 1px solid white;
+    transition: all 1s;
+    transform: translateY(100%);
+    opacity: 0;
+}
+
+span::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 99%;
+    border-top: 1px solid white;
+    transition: all 1s;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 99%;
+    width: 99%;
+    border-bottom: 1px solid white;
+    transition: all 1s;
+    transform: translateX(100%);
+    opacity: 0;
+} 
+
+a:hover::before,a:hover::after {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+a:hover span::after,a:hover span::before {
+    transform: translateX(0%);
+    opacity: 1;
+}
